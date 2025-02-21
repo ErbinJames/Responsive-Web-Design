@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-image: url('asset/background.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white;
+}
+
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+
+.card-container {
+    width: 90%; 
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.photocard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 32%; 
+    min-width: 280px; 
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.photocard:hover {
+    transform: translateY(-5px);
+}
+
+
+.photocard .img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; 
+    object-fit: cover;
+}
+
+
+.photocard h1 {
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #088395;
+    color: white;
+}
+
+
+.photocard p {
+    padding: 10px;
+    font-size: 0.9rem;
+    line-height: 1.0;
+    color: black;
+}
+
+
+@media (max-width: 1023px) {
+    .photocard {
+        width: 48%; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .photocard {
+        width: 90%; 
+    }
+}
