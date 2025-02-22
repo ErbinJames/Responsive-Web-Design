@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+    /*border: 1px dotted red;*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 5px auto 10px auto;
+    padding: 20px;
+}
+
+nav img {
+    width: 148px;
+    height: 40px;
+}
+
+.options {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.options select {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 13px;
+    width: 95px;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.options a {
+    text-decoration: none;
+    background-color: #E50914;
+    color: white;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+main {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('img_assets/PH-en-20250113-TRIFECTA-perspective_8171c01e-c334-403b-bfa2-133bcc962aaf_small.jpg');
+    background-size: auto;
+    background-position: fixed;
+    height: 750px;
+}
+
+.top-section {
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+}
+
+.top-section h1 {
+    font-size: 54px;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.top-section h3 {
+    font-size: 20px;
+    width: 455px;
+    margin: 20px auto 0 auto;
+}
+
+.top-section p {
+    font-size: 16px;
+    width: 550px;
+    margin: 30px auto 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input[type="email"] {
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: 1px solid #a2a1a1;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: #E50914;
+    width: 150px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.trending-page {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.trending-page h2 {
+    width: 1190px;
+    color: white;
+    margin: 10px auto 15px auto;
+    font-size: 24px;
+}
+
+.movie_containers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.movie_containers a img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 100px;
+    margin-top: 90px;
+    border-radius: 5px;
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.reasons-to-join {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin: 20px 0 5px 0;
+}
+
+.reasons-to-join h2 {
+    margin: 5px;
+}
+
+.info_containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 0;
+}
+
+.info_containers div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 250px;
+    height: 280px;
+    background-color: #192247;
+    padding: 12px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.info_containers h2, 
+.info_containers p {
+    margin: 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.info_containers h2 {
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.info_containers p {
+    color: white;
+    font-size: 15px;
+}
+
+footer {
+    text-align: center;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: white;
+    margin-top: 50px;
+    font-size: 12px;
+}
+
+/* Responsive Styles */
+/* Default styles for large screens (1024px and above) remain unchanged */
+
+/* Medium screens (481px - 1023px) */
+@media screen and (max-width: 1023px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .options {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .top-section h1, .top-section h3, .top-section p {
+        width: 90%;
+    }
+    
+    input[type="email"] {
+        width: 80%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+    }
+    
+    .movie_containers {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .movie_containers a img {
+        width: 150px;
+    }
+    
+    .info_containers div {
+        width: 90%;
+    }
+}
+
+/* Small screens (below 480px) */
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    nav img {
+        width: 120px;
+        height: auto;
+    }
+    
+    .options {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .top-section {
+        margin-top: 100px;
+    }
+    
+    .top-section h1 {
+        font-size: 28px;
+        width: 100%;
+    }
+    
+    .top-section h3, .top-section p {
+        font-size: 16px;
+        width: 90%;
+    }
+    
+    form {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    input[type="email"] {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    input[type="submit"] {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .movie_containers {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+    
+    .movie_containers a img {
+        width: 120px;
+    }
+    
+    .info_containers {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info_containers div {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+    
+    footer {
+        text-align: center;
+    }
+}
